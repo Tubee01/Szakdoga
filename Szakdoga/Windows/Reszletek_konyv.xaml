@@ -1,0 +1,46 @@
+﻿<Window x:Class="Szakdoga.Windows.Reszletek_konyv"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Szakdoga.Windows"
+        mc:Ignorable="d"
+        x:Name="Reszletek_konyvek_window"
+        Title="Reszletek" MinHeight="500" MinWidth="300" MaxHeight="500" MaxWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Content="Cim:" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Content="Szerző:" VerticalAlignment="Center"/>
+        <Label Grid.Row="2" Content="Kiadó:" VerticalAlignment="Center"/>
+        <Label Grid.Row="3" Content="Ár:" VerticalAlignment="Center"/>
+        <Label Grid.Row="4" Content="Besorolás:" VerticalAlignment="Center"/>
+        <Label Grid.Row="5" Content="Kiadás:" VerticalAlignment="Center"/>
+        <TextBox Margin="0 0 10 0" x:Name="txtCim" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" />
+        <TextBox Margin="0 0 10 0"  x:Name="txtSzerzo" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox Margin="0 0 10 0" x:Name="txtKiado" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox Margin="0 0 10 0" x:Name="txtAr" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"/>
+        <ComboBox Margin="0 0 10 0" x:Name="cbBesorolas"  Grid.Column="1" Grid.Row="4" VerticalAlignment="Center"/>
+        <DatePicker Margin="0 0 10 0"  x:Name="dtkiadasEv" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center"/>
+        <Button x:Name="btnOK" Content="Hozzáadás" Width="100" Height="25" Grid.Row="8"
+                VerticalAlignment="Center" HorizontalAlignment="Center" Click="BtnOK_Click"
+        />
+        <Button x:Name="btnMegsem" Content="Megsem" Width="100" Height="25" Grid.Row="8"
+                VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Click="btnMegsem_Click" 
+        />
+    </Grid>
+</Window>

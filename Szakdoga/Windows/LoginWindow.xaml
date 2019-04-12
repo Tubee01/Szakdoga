@@ -1,0 +1,28 @@
+﻿<Window x:Class="Szakdoga.Pages.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Szakdoga.Pages"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+
+
+        </Grid.RowDefinitions>
+        <Label Content="Sign Up" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" FontSize="50" />
+        <Label Content="Username" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1" FontSize="15" Foreground="Gray"/>
+        <TextBox x:Name="TB_Username" HorizontalAlignment="Center" Height="30" Width="130" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center"  Margin="0,15,0,0" />
+        <Label Content="Password" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="2" FontSize="15" Foreground="Gray"/>
+        <PasswordBox x:Name="PB_Password" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="30"  Width="130" Margin="0,15,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Button x:Name="B_Login" FontSize="15" FontWeight="DemiBold"  Content="Login" HorizontalAlignment="Center"  Grid.Row="3" VerticalAlignment="Center" Width="150" Height="50" BorderThickness="2" BorderBrush="Black" Click="B_Login_Click"   />
+        
+
+
+    </Grid>
+</Window>

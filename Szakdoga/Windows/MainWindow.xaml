@@ -1,0 +1,174 @@
+﻿<Window x:Class="Szakdoga.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Szakdoga"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="800" MinWidth="750" MinHeight="700">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="465*"/>
+            <RowDefinition Height="70*"/>
+
+        </Grid.RowDefinitions>
+
+        <!-- 1st row buttons -->
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" 
+                    HorizontalAlignment="Left" Width="525" >
+
+            <Button x:Name="Button_Books"  Click="Button_Books_Click"
+                    Margin="20,10,20,10" Width="60"
+                    ToolTip="Könyvek" Background="Transparent" BorderThickness="0">
+                <Image Width="60" Height="60" HorizontalAlignment="Center">
+                    <Image.Source>
+                        <BitmapImage UriSource="../Images/books.png"/>
+                    </Image.Source>
+                </Image>
+            </Button>
+
+            <Button x:Name="Button_Customers"  Width="60"  Margin="0,10,20,15"
+                    ToolTip="Vásárlók" Background="Transparent" BorderThickness="0" Click="Button_Customers_click">
+                <Image Width="60" Height="60" HorizontalAlignment="Center" >
+                    <Image.Source>
+                        <BitmapImage UriSource="../Images/customer.png"/>
+                    </Image.Source>
+                </Image>
+            </Button>
+
+            <!--<Button  x:Name="Button_Bills" 
+                Width="60"  Margin="0,10,20,10"
+                     ToolTip="Számlák" Background="Transparent" BorderThickness="0">
+                <Image Width="60" Height="60" HorizontalAlignment="Center">
+                    <Image.Source>
+                        <BitmapImage UriSource="../Images/receipt.png"/>
+                    </Image.Source>
+                </Image>
+            </Button>-->
+
+            <Button x:Name="Button_Cart"
+                Width="60"  Margin="0,10,20,10"
+                ToolTip="Kosár" Background="Transparent" BorderThickness="0" Click="Button_Cart_Click">
+                <Image Width="60" Height="60" HorizontalAlignment="Center" Source="../Images/shopping-cart.png"/>
+            </Button>
+            <GridSplitter HorizontalAlignment="Stretch" Width="5" IsEnabled="False"/>
+            <Button x:Name="Button_New_PW"
+                Width="60"  Margin="20,10,20,10" 
+                ToolTip="Új jelszó" Background="Transparent" BorderThickness="0" Click="Button_New_PW_Click"
+                
+                >
+                <Image Width="60" Height="60" Source="../Images/lock.png"/>
+            </Button>
+            <Button x:Name="Button_Logout"
+                Width="60"  Margin="0,10,20,10"
+                ToolTip="Kijelentkezés" Background="Transparent" BorderThickness="0" Click="Button_Logout_Click">
+                <Image Width="60" Height="60" HorizontalAlignment="Center" Source="../Images/exit.png"/>
+            </Button>
+
+        </StackPanel>
+        <DataGrid Visibility="Visible" x:Name="grdLista_konyv" Grid.Row="1" Margin="5,0,5,0"  ItemsSource="{Binding}" 
+                  IsReadOnly="True" AutoGenerateColumns="False" >
+            
+
+         
+            <DataGrid.Columns>
+                
+                <DataGridTextColumn  Header="Cim" Width="120*" 
+                                    Binding="{Binding cim}" />
+                <DataGridTextColumn Header="Szerző" Width="120*" 
+                                    Binding="{Binding szerzo}" />
+                <DataGridTextColumn Header="Kiadás" Width="100*" 
+                                    Binding="{Binding kiadasev}" />
+                <DataGridTextColumn Header="Kiadó" Width="120*" 
+                                    Binding="{Binding kiado_nev}" />
+                <DataGridTextColumn Header="Besorolás" Width="120*" 
+                                    Binding="{Binding Besorolasnev}" />
+                <DataGridTextColumn Header="Ár" Width="100*" 
+                                    Binding="{Binding ar}" />
+                <DataGridTemplateColumn Header="Kosár">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Kosárhoz ad" Click="Button_kosarhozad_Click" Width="100"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        
+        
+        <DataGrid x:Name="grdLista_vasarlok" Grid.Row="1" Margin="5,0,5,0"  ItemsSource="{Binding}"
+                  IsReadOnly="True" AutoGenerateColumns="False" Visibility="Hidden" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="0.5*" 
+                                    Binding="{Binding id}" />
+                <DataGridTextColumn Header="Név" Width="2*" 
+                                    Binding="{Binding nev }" />
+                <DataGridTextColumn Header="Cim" Width="3*" 
+                                    Binding="{Binding cim }" />
+                <DataGridTextColumn Header="E-mail" Width="2*" 
+                                    Binding="{Binding email}" />
+                <DataGridTextColumn Header="Telefonszám" Width="2*" 
+                                    Binding="{Binding telefon}" />
+               
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        
+        <!--<DataGrid x:Name="grdLista_szamlak" Grid.Row="1" Margin="5,0,5,0"  ItemsSource="{Binding}"
+                  IsReadOnly="True" AutoGenerateColumns="False" Visibility="Visible">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Vasarlas Id" Width="1*" 
+                                    Binding="{Binding id}" />
+                <DataGridTextColumn Header="Vasarlo Id" Width="2*" 
+                                    Binding="{Binding vasarloId}" />
+                <DataGridTextColumn Header="Kiállitva" Width="2*" 
+                                    Binding="{Binding }" />
+                <DataGridTextColumn Header="Ár" Width="2*" 
+                                    Binding="{Binding }" />
+                <DataGridTextColumn Header="Kiadta(felhasználó)" Width="2*" 
+                                    Binding="{Binding }" />
+                 
+
+            </DataGrid.Columns>
+        </DataGrid>-->
+
+        <!-- mod buttons -->
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2"
+                    HorizontalAlignment="Left" Width="800" >
+
+            <Button x:Name="Button_Add_New" IsEnabled="False"
+                    Margin="20,0,20,0" Width="60"
+                    ToolTip="Uj hozzáadás" Background="Transparent" BorderThickness="0" Click="Button_Add_New_Click">
+                <Image Width="60" Height="60" HorizontalAlignment="Center" Source="../Images/add.png"/>
+            </Button>
+
+            <Button  x:Name="Button_Delete" Width="60" Margin="0,0,20,0" IsEnabled="False"
+                    ToolTip="Törlés" Background="Transparent" BorderThickness="0" Click="Button_Delete_Click">
+                <Image Width="60" Height="60" HorizontalAlignment="Center" Source="../Images/garbage.png"/>
+            </Button>
+            <Button x:Name="Button_Mod"  Width="65" Margin="0,0,20,0" IsEnabled="False"
+                      ToolTip="Módositás" Background="Transparent" BorderThickness="0" Click="btn_click_mod">
+                <Image Width="60" Height="60" HorizontalAlignment="Center" Source="../Images/write.png"/>
+            </Button>
+
+            <GridSplitter HorizontalAlignment="Stretch" Width="5" IsEnabled="False"/>
+            <Image Width="40" Height="50" Source="../Images/search.png" VerticalAlignment="Center" Margin="10,10,0,10"/>
+
+            <TextBox x:Name="TxtSearch" VerticalAlignment="Center" Width="200" Margin="0,20"  />
+            <Button x:Name="Button_Search" Content="Keresés" Width="80" Margin="20,20"  Click="Button_Search_Click" />
+
+
+        </StackPanel>
+
+
+    </Grid>
+
+</Window>
