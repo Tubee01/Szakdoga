@@ -46,15 +46,15 @@ namespace Szakdoga.Pages
                 switch (ex.Number)
                 {
                     case 0:
-                        MessageBox.Show(" >>>> Cannot contact MySQL Server ");//MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        MessageBox.Show(" >>>> Cannot contact MySQL Server ", "Error");//MessageBox.Show("Cannot connect to server.  Contact administrator");
                         break;
 
                     case 1045:
-                        MessageBox.Show(" >>>> Invalid username/password, please try again");
+                        MessageBox.Show(" >>>> Invalid username/password, please try again", "Error");
                         break;
 
                     case 1042:
-                        MessageBox.Show(" >>>> Unable to resolve DNS");
+                        MessageBox.Show(" >>>> Unable to resolve DNS", "Error");
                         break;
                     case 1044:
                         MessageBox.Show(ex.Message);
