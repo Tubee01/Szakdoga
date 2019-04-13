@@ -86,7 +86,7 @@ namespace Szakdoga.Pages
                     new MainWindow().Show();
 
                     //
-                    string log_logins = "INSERT INTO log_logins(username, datum) values('" + TB_Username.Text + "', '" + DateTime.Now + "');";
+                    string log_logins = "INSERT INTO log_logins(username, datum) values('" + TB_Username.Text + "', '" + DateTime.UtcNow + "');";
                     MySqlCommand logCommand = new MySqlCommand(log_logins, DatabaseConnection.DatabaseCon);
                     MySqlDataReader Myreader2;
                     Myreader2 = logCommand.ExecuteReader();
@@ -102,7 +102,7 @@ namespace Szakdoga.Pages
                     return;
                 }
 
-                MessageBox.Show("Invalid username or password");
+                MessageBox.Show("Invalid username or password","Error");
                 PB_Password.Clear();
                 return;
 

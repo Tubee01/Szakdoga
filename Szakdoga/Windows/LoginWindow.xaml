@@ -15,10 +15,10 @@
 
 
         </Grid.RowDefinitions>
-        <Label Content="Sign In" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" FontSize="50" />
-        <Label Content="Username" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1" FontSize="15" Foreground="Gray"/>
+        <Label Content="Bejelentkezés" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" FontSize="50" />
+        <Label Content="Felhasználónév" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1" FontSize="15" Foreground="Gray"/>
         <TextBox x:Name="TB_Username" HorizontalAlignment="Center" Height="30" Width="130" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center"  Margin="0,15,0,0" />
-        <Label Content="Password" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="2" FontSize="15" Foreground="Gray"/>
+        <Label Content="Jelszó" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="2" FontSize="15" Foreground="Gray"/>
         <PasswordBox x:Name="PB_Password" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="30"  Width="130" Margin="0,15,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
         <Button x:Name="B_Login" FontSize="15" FontWeight="DemiBold"  Content="Login" HorizontalAlignment="Center"  Grid.Row="3" VerticalAlignment="Center" Width="150" Height="50" BorderThickness="2" BorderBrush="Black" Click="B_Login_Click"   />
         

@@ -1,9 +1,9 @@
 ﻿
 
-FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\JelszoMod.xaml;;
-FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\Kiadas.xaml;;
+FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\JelszoModWindow.xaml;;
+FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\KosarWindow.xaml;;
 FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\MainWindow.xaml;;
-FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\Login.xaml;;
-FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\Modositas.xaml;;
-FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\Uj.xaml;;
+FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\LoginWindow.xaml;;
+FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\Reszletek_konyvWindow.xaml;;
+FD:\_Szakdoga_\Szakdoga\Szakdoga\Windows\Reszletek_vasarlokWindow.xaml;;
 

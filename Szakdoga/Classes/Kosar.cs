@@ -11,7 +11,6 @@ namespace Szakdoga.Classes
     {
 
         public int osszeg { get; set; }
-        public int tetelek { get; set; }
 
 
         public struct KosarItem

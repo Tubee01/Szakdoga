@@ -155,7 +155,7 @@
                 <Image Width="60" Height="60" HorizontalAlignment="Center" Source="../Images/garbage.png"/>
             </Button>
             <Button x:Name="Button_Mod"  Width="65" Margin="0,0,20,0" IsEnabled="False"
-                      ToolTip="Módositás" Background="Transparent" BorderThickness="0" Click="btn_click_mod">
+                      ToolTip="Módosítás" Background="Transparent" BorderThickness="0" Click="btn_click_mod">
                 <Image Width="60" Height="60" HorizontalAlignment="Center" Source="../Images/write.png"/>
             </Button>
 
