@@ -24,5 +24,4 @@ D:\_Szakdoga_\Szakdoga\Szakdoga\obj\Release\Szakdoga.csproj.CoreCompileInputs.ca
 D:\_Szakdoga_\Szakdoga\Szakdoga\obj\Release\Szakdoga.csproj.CopyComplete
 D:\_Szakdoga_\Szakdoga\Szakdoga\obj\Release\Szakdoga.exe
 D:\_Szakdoga_\Szakdoga\Szakdoga\obj\Release\Szakdoga.pdb
-D:\_Szakdoga_\Szakdoga\Szakdoga\bin\Release\Szakdoga.exe.CodeAnalysisLog.xml
-D:\_Szakdoga_\Szakdoga\Szakdoga\bin\Release\Szakdoga.exe.lastcodeanalysissucceeded
+D:\_Szakdoga_\Szakdoga\Szakdoga\obj\Release\Szakdoga.csprojAssemblyReference.cache
