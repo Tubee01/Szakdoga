@@ -86,7 +86,7 @@ namespace Szakdoga.Pages
                     new MainWindow().Show();
 
                     //
-                    string log_logins = "INSERT INTO log_logins(username, date) values('" + TB_Username.Text + "', '" + DateTime.UtcNow.ToString() + "');";
+                    string log_logins = "INSERT INTO log_logins(username, datum) values('" + TB_Username.Text + "', '" + DateTime.UtcNow.ToString() + "');";
                     MySqlCommand logCommand = new MySqlCommand(log_logins, DatabaseConnection.DatabaseCon);
                     MySqlDataReader Myreader2;
                     Myreader2 = logCommand.ExecuteReader();
