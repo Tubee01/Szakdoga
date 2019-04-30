@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Szakdoga"
         mc:Ignorable="d"
         Title="Könyvesbolt adatbázisnyilvántartó" Height="700" Width="800" MinWidth="750" MinHeight="700">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -71,11 +71,11 @@
         </StackPanel>
         <DataGrid Visibility="Visible" x:Name="grdLista_konyv" Grid.Row="1" Margin="5,0,5,0"  ItemsSource="{Binding}" 
                   IsReadOnly="True" AutoGenerateColumns="False" >
-            
 
-         
+
+
             <DataGrid.Columns>
-                
+
                 <DataGridTextColumn  Header="Cim" Width="120*" 
                                     Binding="{Binding cim}" />
                 <DataGridTextColumn Header="Szerző" Width="120*" 
@@ -100,9 +100,9 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        
-        
-        
+
+
+
         <DataGrid x:Name="grdLista_vasarlok" Grid.Row="1" Margin="5,0,5,0"  ItemsSource="{Binding}"
                   IsReadOnly="True" AutoGenerateColumns="False" Visibility="Hidden" >
             <DataGrid.Columns>
@@ -116,11 +116,11 @@
                                     Binding="{Binding email}" />
                 <DataGridTextColumn Header="Telefonszám" Width="2*" 
                                     Binding="{Binding telefon}" />
-               
+
             </DataGrid.Columns>
         </DataGrid>
-        
-        
+
+
         <!--<DataGrid x:Name="grdLista_szamlak" Grid.Row="1" Margin="5,0,5,0"  ItemsSource="{Binding}"
                   IsReadOnly="True" AutoGenerateColumns="False" Visibility="Visible">
             <DataGrid.Columns>
@@ -163,10 +163,11 @@
             <Image Width="40" Height="50" Source="../Images/search.png" VerticalAlignment="Center" Margin="10,10,0,10"/>
 
             <TextBox x:Name="TxtSearch" VerticalAlignment="Center" Width="200" Margin="0,20"  />
-            <Button x:Name="Button_Search" Content="Keresés" Width="80" Margin="20,20"  Click="Button_Search_Click" />
+            <Button x:Name="Button_Search" Content="Keresés" Width="80" Margin="20,20"  Click="Button_Search_Click" IsEnabled="False"/>
 
 
         </StackPanel>
+        <Image x:Name="copyright" Source="../Images/icons8-copyright-26.png " HorizontalAlignment="Left" Height="32" Margin="717,24,0,0" VerticalAlignment="Top" Width="27" ToolTipService.ShowDuration="100000"  ToolTip="Icons made by Freepik, Smashicons, Roundicons, Pixel perfect,  Martz90. Downloaded from www.flaticon.com and www.iconarchive.com"/>
 
 
     </Grid>

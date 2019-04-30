@@ -22,7 +22,7 @@ namespace Szakdoga
     {
         public Kosar kosar;
 
-
+        public bool IDbekerve;
         public KosarWindow(Kosar kosar)
         {
 
@@ -30,11 +30,12 @@ namespace Szakdoga
             this.kosar = kosar;
             grdlista_kosar.ItemsSource = kosar.GetKosarItems();
             TB_osszeg.DataContext = kosar.osszeg;
-            
+            IDbekerve = false;
+
 
         }
-      
-       
+
+
 
         private void Button_Click_Back(object sender, RoutedEventArgs e)
         {
@@ -50,6 +51,8 @@ namespace Szakdoga
                 if (list.Count > 0)
                 {
                     DataContext = list;
+                    IDbekerve = true;
+
                     return;
                 }
             }
@@ -57,7 +60,7 @@ namespace Szakdoga
         }
 
         private void Button_Click_Kiad(object sender, RoutedEventArgs e)
-        {   if (TxtVasarloID.Text != null)
+        {   if ( IDbekerve !=false && grdlista_kosar.HasItems == true)
             {
                 string tetelek = "";
                 grdlista_kosar.SelectAll();
@@ -68,22 +71,44 @@ namespace Szakdoga
                     kosar.RemoveItem(((Kosar.KosarItem)grdlista_kosar.SelectedItem).konyv.id, ((Kosar.KosarItem)grdlista_kosar.SelectedItem).konyv.ar);
                     grdlista_kosar.ItemsSource = kosar.GetKosarItems();
                     tetelek +=""+ _quantity + " x " + _cim + " ";
+                    kosar.osszeg = 0;
+                    TB_osszeg.DataContext = kosar.osszeg;
+                    IDbekerve = false;
+
 
                 }
                 Kosar.InsertToDB(Convert.ToInt32(TxtVasarloID.Text), Convert.ToInt32(TB_osszeg.Text), tetelek);
                 return;
             }
-            MessageBox.Show("Töltse ki a VásárlóId mezőt!", "Hiba");
-        }
+            if (IDbekerve == false)
+            {
+                MessageBox.Show("Kérje be a vásárló adatait!", "Hiba");
+            }else
+            {
+                MessageBox.Show("Üres a kosár!","Hiba");
+            }
+
+            }
 
         private void Button_Click_delete(object sender, RoutedEventArgs e)
         {
 
+            if (grdlista_kosar.SelectedItem != null)
+            {
+                MessageBoxResult result1 = MessageBox.Show("Tényleg törli a kijelölt elemet?", "Törlés", MessageBoxButton.YesNo);
+                if (result1 == MessageBoxResult.Yes)
+                {
+                    
+                    kosar.RemoveItem(((Kosar.KosarItem)grdlista_kosar.SelectedItem).konyv.id, ((Kosar.KosarItem)grdlista_kosar.SelectedItem).konyv.ar);
+                    TB_osszeg.DataContext = kosar.osszeg;
+                    grdlista_kosar.ItemsSource = kosar.GetKosarItems();
+                    grdlista_kosar.Items.Refresh();
 
-            kosar.RemoveItem(((Kosar.KosarItem)grdlista_kosar.SelectedItem).konyv.id, ((Kosar.KosarItem)grdlista_kosar.SelectedItem).konyv.ar);      
-            TB_osszeg.DataContext = kosar.osszeg;
-            grdlista_kosar.ItemsSource = kosar.GetKosarItems();
-            grdlista_kosar.Items.Refresh();
+                }
+                return;
+            }
+            MessageBox.Show("Nincs kiválaszott elem!", "Hiba");
+
 
         }
 

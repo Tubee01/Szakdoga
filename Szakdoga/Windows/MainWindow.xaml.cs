@@ -18,7 +18,7 @@ namespace Szakdoga
         public static List<Konyvek> konyvlist = Konyvek.GetKonyvek();
         public static List<Vasarlok> vasarloklist = Vasarlok.GetVasarlok(null);
 
-
+        
         private Kosar kosar;
 
         public Kosar Kosar
@@ -63,6 +63,8 @@ namespace Szakdoga
             Button_Delete.IsEnabled = true;
             Button_Mod.IsEnabled = true;
             Button_Add_New.IsEnabled = true;
+            Button_Search.IsEnabled = true;
+
 
             // List visibility
             grdLista_konyv.Visibility = Visibility.Visible;
@@ -82,6 +84,7 @@ namespace Szakdoga
             Button_Customers.IsEnabled = false;
             Button_Delete.IsEnabled = true;
             Button_Mod.IsEnabled = true;
+            Button_Search.IsEnabled = true;
             Button_Add_New.IsEnabled = true;
 
             //List visibility
@@ -328,10 +331,13 @@ namespace Szakdoga
 
             if (window != null)
             {
-                window.Focus();
+                window.Close();
+                Kosar.AddItem(((Konyvek)grdLista_konyv.SelectedItem).id, 1);
+                Kosar.GetCount(((Konyvek)grdLista_konyv.SelectedItem).ar);
             }
             else
             {
+                
                 Kosar.AddItem(((Konyvek)grdLista_konyv.SelectedItem).id, 1);
                 Kosar.GetCount(((Konyvek)grdLista_konyv.SelectedItem).ar);
                 
