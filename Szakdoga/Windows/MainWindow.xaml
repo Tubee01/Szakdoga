@@ -167,7 +167,7 @@
 
 
         </StackPanel>
-        <Image x:Name="copyright" Source="../Images/icons8-copyright-26.png " HorizontalAlignment="Left" Height="32" Margin="717,24,0,0" VerticalAlignment="Top" Width="27" ToolTipService.ShowDuration="100000"  ToolTip="Icons made by Freepik, Smashicons, Roundicons, Pixel perfect,  Martz90. Downloaded from www.flaticon.com and www.iconarchive.com"/>
+        <Image x:Name="copyright" Source="../Images/icons8-copyright-26.png " HorizontalAlignment="Left" Height="32" Margin="717,24,0,0" VerticalAlignment="Top" Width="27"   ToolTipService.ShowDuration="100000"  ToolTip="Icons made by Freepik, Smashicons, Roundicons, Pixel perfect,  Martz90. Downloaded from www.flaticon.com and www.iconarchive.com"/>
 
 
     </Grid>

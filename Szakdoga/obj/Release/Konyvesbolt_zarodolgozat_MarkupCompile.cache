@@ -1,14 +1,14 @@
-﻿Szakdoga
+﻿Konyvesbolt_zarodolgozat
 
 
 winexe
 C#
 .cs
-D:\_Szakdoga_\Szakdoga\Szakdoga\obj\Debug\
-Szakdoga
+D:\_Szakdoga_\Szakdoga\Szakdoga\obj\Release\
+Konyvesbolt_zarodolgozat
 none
 false
-DEBUG;TRACE
+TRACE
 D:\_Szakdoga_\Szakdoga\Szakdoga\App.xaml
 6-1278723539
 1-858388472

@@ -84,7 +84,7 @@ namespace Szakdoga.Windows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Szakdoga;component/windows/jelszomodwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Konyvesbolt_zarodolgozat;component/windows/jelszomodwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Windows\JelszoModWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

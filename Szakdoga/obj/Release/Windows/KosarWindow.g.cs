@@ -116,7 +116,7 @@ namespace Szakdoga {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Szakdoga;component/windows/kosarwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Konyvesbolt_zarodolgozat;component/windows/kosarwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Windows\KosarWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

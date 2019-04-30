@@ -124,7 +124,7 @@ namespace Szakdoga.Windows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Szakdoga;component/windows/reszletek_konyvwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Konyvesbolt_zarodolgozat;component/windows/reszletek_konyvwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Windows\Reszletek_konyvWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

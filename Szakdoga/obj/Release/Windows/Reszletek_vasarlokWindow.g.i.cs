@@ -108,7 +108,7 @@ namespace Szakdoga.Windows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Szakdoga;component/windows/reszletek_vasarlokwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Konyvesbolt_zarodolgozat;component/windows/reszletek_vasarlokwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Windows\Reszletek_vasarlokWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -76,7 +76,7 @@ namespace Szakdoga.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Szakdoga;component/windows/loginwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Konyvesbolt_zarodolgozat;component/windows/loginwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Windows\LoginWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
