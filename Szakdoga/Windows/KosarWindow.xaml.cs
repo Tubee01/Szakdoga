@@ -71,13 +71,14 @@ namespace Szakdoga
                     kosar.RemoveItem(((Kosar.KosarItem)grdlista_kosar.SelectedItem).konyv.id, ((Kosar.KosarItem)grdlista_kosar.SelectedItem).konyv.ar);
                     grdlista_kosar.ItemsSource = kosar.GetKosarItems();
                     tetelek +=""+ _quantity + " x " + _cim + " ";
-                    kosar.osszeg = 0;
-                    TB_osszeg.DataContext = kosar.osszeg;
-                    IDbekerve = false;
+                    
 
 
                 }
                 Kosar.InsertToDB(Convert.ToInt32(TxtVasarloID.Text), Convert.ToInt32(TB_osszeg.Text), tetelek);
+                kosar.osszeg = 0;
+                TB_osszeg.DataContext = kosar.osszeg;
+                IDbekerve = false;
                 return;
             }
             if (IDbekerve == false)
