@@ -30,7 +30,7 @@
         <Label Content="Összeg:" HorizontalAlignment="Left" Margin="469,10,0,0" Grid.Row="1" VerticalAlignment="Top" />
         <TextBlock  x:Name="TB_osszeg" HorizontalAlignment="Left" Margin="536,15,0,0" Grid.Row="1" Text="{Binding }" TextWrapping="Wrap"  VerticalAlignment="Top" TextAlignment="Center" Width="100"/>
         <Button Content="Kiad" HorizontalAlignment="Left" Margin="21,34,0,0" Grid.Row="1" VerticalAlignment="Top" Width="122" Height="47" Click="Button_Click_Kiad"/>
-        <DataGrid x:Name="grdlista_kosar" Grid.Row="0" Margin="10,115,10,10" AutoGenerateColumns="False" ItemsSource="{Binding}"  >
+        <DataGrid IsReadOnly="True" x:Name="grdlista_kosar" Grid.Row="0" Margin="10,115,10,10" AutoGenerateColumns="False" ItemsSource="{Binding}"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Mennyiség" Width="*" 
                                     Binding="{Binding quantity}"/>
